@@ -1,0 +1,409 @@
+object DirPxForm: TDirPxForm
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 690
+  ClientWidth = 1103
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object btn1: TButton
+    Action = aAddDir
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 24.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Visible = True
+  end
+  object lst_Dirs: TListBox
+    Position.X = 184.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 145.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 173.000000000000000000
+    Viewport.Height = 141.000000000000000000
+  end
+  object btn2: TButton
+    Action = aFindFiles
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 24.000000000000000000
+    Position.Y = 137.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Visible = True
+  end
+  object lst_Files: TListBox
+    Position.X = 136.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 409.000000000000000000
+    Size.Height = 145.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 405.000000000000000000
+    Viewport.Height = 141.000000000000000000
+  end
+  object pnl_PFiles: TPanel
+    Position.X = 40.000000000000000000
+    Position.Y = 368.000000000000000000
+    Size.Width = 265.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    object lbl_pFiles: TLabel
+      Position.X = 24.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'lbl_pFiles'
+    end
+    object pbFiles: TProgressBar
+      Orientation = Horizontal
+      Position.X = 24.000000000000000000
+      Position.Y = 13.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'progressbarstyle'
+      Value = 34.000000000000000000
+    end
+    object lbl_pFilesPercent: TLabel
+      AutoSize = True
+      Position.X = 184.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 17.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = '0%'
+    end
+  end
+  object btn3: TButton
+    Action = aCalc
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 72.000000000000000000
+    Position.Y = 488.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Visible = True
+  end
+  object VertScrollBox1: TVertScrollBox
+    Position.X = 576.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 513.000000000000000000
+    Size.Height = 361.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    Viewport.Width = 513.000000000000000000
+    Viewport.Height = 361.000000000000000000
+    object pnl0: TPanel
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 473.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      object lbl_rInfo: TLabel
+        Tag = 10
+        Position.X = 8.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 449.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = 'lbl_rInfo'
+      end
+      object pbR: TProgressBar
+        Orientation = Horizontal
+        Position.X = 16.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 153.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'progressbarstyle'
+        Value = 10.000000000000000000
+      end
+      object lbl_rPercent: TLabel
+        Tag = 1
+        Position.X = 171.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 70.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.WordWrap = False
+        Text = '0%'
+      end
+      object rectR: TRectangle
+        Tag = 1
+        Fill.Color = claBisque
+        Position.X = 408.000000000000000000
+        Position.Y = 12.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lbl_rColor: TLabel
+        Tag = 20
+        Position.X = 200.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Trailing
+        Text = '0 0 0 0'
+      end
+    end
+  end
+  object btn4: TButton
+    Position.X = 24.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 104.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'save_FileNames'
+    OnClick = btn4Click
+  end
+  object btn5: TButton
+    Action = aPause
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 72.000000000000000000
+    Position.Y = 536.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 15
+    Visible = True
+  end
+  object btn6: TButton
+    Action = aResume
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 72.000000000000000000
+    Position.Y = 576.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 16
+    Visible = True
+  end
+  object btn7: TButton
+    Action = aStop
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 136.000000000000000000
+    Position.Y = 456.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 18
+    Visible = True
+  end
+  object btn8: TButton
+    Action = aCreateSeq
+    Enabled = False
+    ImageIndex = -1
+    Position.X = 72.000000000000000000
+    Position.Y = 608.000000000000000000
+    TabOrder = 21
+    Visible = True
+  end
+  object Rect_Result: TRectangle
+    Tag = 1
+    Fill.Color = claBisque
+    Position.X = 448.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 49.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button1: TButton
+    Action = aClearDirs
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 24.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 145.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Visible = True
+  end
+  object lbl_Res: TLabel
+    Position.X = 376.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 193.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    TextSettings.WordWrap = False
+    Text = '------'
+  end
+  object lst_Log: TListBox
+    Position.X = 328.000000000000000000
+    Position.Y = 360.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 281.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 23
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 221.000000000000000000
+    Viewport.Height = 277.000000000000000000
+  end
+  object VertScrollBox_path: TVertScrollBox
+    Position.X = 576.000000000000000000
+    Position.Y = 400.000000000000000000
+    Size.Width = 513.000000000000000000
+    Size.Height = 273.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+    Viewport.Width = 513.000000000000000000
+    Viewport.Height = 273.000000000000000000
+  end
+  object pnlPathS: TPanel
+    Position.X = 528.000000000000000000
+    Position.Y = 272.000000000000000000
+    Size.Width = 473.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    object lbl_pathName: TLabel
+      Tag = 10
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 449.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'PathName'
+    end
+    object rct_PathColor: TRectangle
+      Tag = 1
+      Fill.Color = claBisque
+      Position.X = 240.000000000000000000
+      Position.Y = 31.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object lbl_PathColor: TLabel
+      Tag = 20
+      Position.X = 8.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 225.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Trailing
+      Text = '0 0 0 0'
+    end
+  end
+  object btn9: TCornerButton
+    Action = actStartCycle
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 176.000000000000000000
+    Position.Y = 608.000000000000000000
+    Sides = [Top, Left, Bottom, Right]
+    Size.Width = 144.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 26
+    Visible = True
+    XRadius = 3.000000000000000000
+    YRadius = 3.000000000000000000
+  end
+  object tmr1: TTimer
+    Enabled = False
+    Interval = 300
+    OnTimer = tmr1Timer
+    Left = 544
+    Top = 344
+  end
+  object btn10: TButton
+    Position.X = 40.000000000000000000
+    Position.Y = 640.000000000000000000
+    Size.Width = 112.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 29
+    Text = 'Test_memBMP'
+    OnClick = btn10Click
+  end
+  object tmrRenew: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = tmrRenewTimer
+    Left = 384
+    Top = 424
+  end
+  object ActionList1: TActionList
+    Left = 480
+    Top = 40
+    object aAddDir: TAction
+      Text = #1044#1086#1073#1072#1074#1080#1090#1100' '#1082#1072#1090#1072#1083#1086#1075
+      OnExecute = aAddDirExecute
+    end
+    object aFindFiles: TAction
+      Text = #1053#1072#1081#1090#1080' '#1092#1072#1081#1083#1099
+      OnExecute = aFindFilesExecute
+    end
+    object aCalc: TAction
+      Text = #1042#1099#1095#1080#1089#1083#1077#1085#1080#1077
+      OnExecute = aCalcExecute
+    end
+    object aPause: TAction
+      Text = #1055#1072#1091#1079#1072
+      OnExecute = aPauseExecute
+    end
+    object aResume: TAction
+      Text = #1042#1086#1079#1086#1073#1085#1086#1074#1080#1090#1100
+      OnExecute = aResumeExecute
+    end
+    object aStop: TAction
+      Text = #1054#1089#1090#1072#1085#1086#1074#1080#1090#1100
+      OnExecute = aStopExecute
+    end
+    object aCreateSeq: TAction
+      Text = 'aCreateSeq'
+      OnExecute = aCreateSeqExecute
+    end
+    object aClearDirs: TAction
+      Text = #1054#1095#1080#1089#1090#1080#1090#1100
+      OnExecute = aClearDirsExecute
+      OnUpdate = aClearDirsUpdate
+    end
+    object actStartCycle: TAction
+      Text = #1062#1080#1082#1083#1080#1095#1077#1089#1082#1080#1081
+      OnExecute = actStartCycleExecute
+    end
+  end
+end
